@@ -1,0 +1,11 @@
+---
+- name: Apache server ports in firewalld setup 
+  hosts: web
+
+  tasks:
+  - name: firewalld permits http service
+    firewalld:
+      service: http https
+      permanent: true
+      state: enabled
+      immediate: yes
