@@ -1,6 +1,6 @@
 ---
 - name: Apache server ports in firewalld setup 
-
+  hosts: app-nodes
   tasks:
   - name: firewalld permits https service
     firewalld:
