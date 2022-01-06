@@ -1,0 +1,13 @@
+---
+- name: Apache server ports in firewalld setup 
+  hosts: app-nodes
+  tasks:
+  - name: firewalld permits https service
+    firewalld:
+      service: "{{ item }}"
+      permanent: false
+      state: absent
+      immediate: yes
+    with_items:
+      - http
+      - https
