@@ -1,9 +1,9 @@
 ---
-- name: Apache server installed
+- name: Remove Apache server
   hosts: app-nodes
 
   tasks:
-  - name: latest Apache version installed
+  - name: Remove Apache
     yum:
       name: httpd
       state: absent
