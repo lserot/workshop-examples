@@ -1,8 +1,8 @@
 ---
-- name: Apache server ports in firewalld setup 
+- name: Apache server ports in firewalld conf remove  
   hosts: app-nodes
   tasks:
-  - name: firewalld permits https service
+  - name: firewalld ports removal for web service
     firewalld:
       service: "{{ item }}"
       permanent: false
