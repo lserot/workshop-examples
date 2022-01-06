@@ -1,6 +1,5 @@
 ---
 - name: Apache server ports in firewalld setup 
-  hosts: web
 
   tasks:
   - name: firewalld permits https service
