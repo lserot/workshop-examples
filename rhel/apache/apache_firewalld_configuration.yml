@@ -3,9 +3,12 @@
   hosts: web
 
   tasks:
-  - name: firewalld permits http service
+  - name: firewalld permits https service
     firewalld:
-      service: http https
+      service: "{{ item }}"
       permanent: true
       state: enabled
       immediate: yes
+    with_items:
+      - http
+      - https
