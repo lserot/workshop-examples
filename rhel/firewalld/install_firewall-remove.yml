@@ -1,6 +1,6 @@
 ---
 - name: Firewll server installed
-  hosts: web
+  hosts: app-nodes
 
   tasks:
   - name: latest firewalld version installed
