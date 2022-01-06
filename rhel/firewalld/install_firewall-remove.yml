@@ -1,9 +1,9 @@
 ---
-- name: Firewll server installed
+- name: Firewll server remove
   hosts: app-nodes
 
   tasks:
-  - name: latest firewalld version installed
+  - name: remove firewalld
     yum:
       name: firewalld
       state: absent
