@@ -1,5 +1,5 @@
 ---
-- name: Firewll server remove
+- name: Firewall server remove
   hosts: app-nodes
 
   tasks:
